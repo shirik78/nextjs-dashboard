@@ -15,12 +15,7 @@ export async function fetchRevenue() {
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
 
   try {
-    // Artificially delay a response for demo purposes.
-    // Don't do this in production :)
-
-
     const data = await sql<Revenue>`SELECT * FROM revenue`;
-
 
     return data.rows;
   } catch (error) {
@@ -170,8 +165,7 @@ export async function fetchCustomers() {
   try {
     const data = await sql<CustomerField>`
       SELECT
-        id,
-        name
+        *
       FROM customers
       ORDER BY name ASC
     `;
