@@ -4,5 +4,5 @@ This is the starter template for the Next.js App Router Course. It contains the 
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
 
-[WARNING] This code contains experimental hookof Next.js - useActionState  and  it working fine on  localhost  but not  working  on  Vercel
+WARNING This code contains experimental hook of Next.js - useActionState  and  it working fine on  localhost  but not  working  on  Vercel
 (Type error: Module '"react"' has no exported member 'useActionState'.)
