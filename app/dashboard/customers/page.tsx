@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import { lusitana } from '@/app/ui/fonts';
-import  {Suspense} from 'react';
+import { Suspense } from 'react';
 import Image from 'next/image';
-import {TableRowSkeleton} from '@/app/ui/skeletons';
-import {fetchCustomers}  from '@/app/lib/data';
+import { TableRowSkeleton } from '@/app/ui/skeletons';
+import { fetchCustomers }  from '@/app/lib/data';
 
 export const metadata:Metadata = {
     title:'Customers'
@@ -18,9 +18,7 @@ export default  async function Page() {
             </h1>
             {customers?.map((customer)=>{
                 return (   
-                <Suspense fallback = {<TableRowSkeleton/>} key={customer.id}
-                    
-                  >
+                <Suspense fallback = {<TableRowSkeleton/>} key={customer.id}>
                   <div className="mb-2 w-full rounded-md bg-white p-4">
                     <div className="flex items-center justify-between border-b pb-4">
                       <div>
